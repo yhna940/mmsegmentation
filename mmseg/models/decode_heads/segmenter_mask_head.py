@@ -45,21 +45,21 @@ class SegmenterMaskTransformerHead(BaseDecodeHead):
     """
 
     def __init__(
-            self,
-            in_channels,
-            num_layers,
-            num_heads,
-            embed_dims,
-            mlp_ratio=4,
-            drop_path_rate=0.1,
-            drop_rate=0.0,
-            attn_drop_rate=0.0,
-            num_fcs=2,
-            qkv_bias=True,
-            act_cfg=dict(type='GELU'),
-            norm_cfg=dict(type='LN'),
-            init_std=0.02,
-            **kwargs,
+        self,
+        in_channels,
+        num_layers,
+        num_heads,
+        embed_dims,
+        mlp_ratio=4,
+        drop_path_rate=0.1,
+        drop_rate=0.0,
+        attn_drop_rate=0.0,
+        num_fcs=2,
+        qkv_bias=True,
+        act_cfg=dict(type='GELU'),
+        norm_cfg=dict(type='LN'),
+        init_std=0.02,
+        **kwargs,
     ):
         super(SegmenterMaskTransformerHead, self).__init__(
             in_channels=in_channels, **kwargs)
