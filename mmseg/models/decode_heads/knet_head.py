@@ -35,15 +35,15 @@ class KernelUpdator(nn.Module):
     """
 
     def __init__(
-            self,
-            in_channels=256,
-            feat_channels=64,
-            out_channels=None,
-            gate_sigmoid=True,
-            gate_norm_act=False,
-            activate_out=False,
-            norm_cfg=dict(type='LN'),
-            act_cfg=dict(type='ReLU', inplace=True),
+        self,
+        in_channels=256,
+        feat_channels=64,
+        out_channels=None,
+        gate_sigmoid=True,
+        gate_norm_act=False,
+        activate_out=False,
+        norm_cfg=dict(type='LN'),
+        act_cfg=dict(type='ReLU', inplace=True),
     ):
         super(KernelUpdator, self).__init__()
         self.in_channels = in_channels

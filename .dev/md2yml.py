@@ -223,8 +223,8 @@ def parse_md(md_file):
                 i = j
             else:
                 i += 1
-    flag = (code_url is not None) and (paper_url is not None) and (repo_url
-                                                                   is not None)
+    flag = (code_url is not None) and (paper_url is not None) and (repo_url is
+                                                                   not None)
     assert flag, f'{collection_name} readme error'
     collection['Name'] = method
     collection['Metadata']['Training Data'] = datasets

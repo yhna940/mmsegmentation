@@ -5,15 +5,15 @@ import torch
 import torch.nn as nn
 from mmcv.cnn import ConvModule
 
-try:
-    from mmcv.ops import point_sample
-except ModuleNotFoundError:
-    point_sample = None
-
 from mmseg.models.builder import HEADS
 from mmseg.ops import resize
 from ..losses import accuracy
 from .cascade_decode_head import BaseCascadeDecodeHead
+
+try:
+    from mmcv.ops import point_sample
+except ModuleNotFoundError:
+    point_sample = None
 
 
 def calculate_uncertainty(seg_logits):
